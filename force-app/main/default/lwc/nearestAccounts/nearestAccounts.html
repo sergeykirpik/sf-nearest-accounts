@@ -1,0 +1,8 @@
+<template>
+  <lightning-card title="Nearest Accounts">
+    <lightning-button label="Current location" slot="actions" variant="brand" onclick={handleCurrentLocationClick}></lightning-button>
+    <template if:true={currentLocation}>
+        <lightning-map map-markers={mapMarkers} center={currentLocation} zoom-level={zoomLevel}></lightning-map>
+    </template>
+  </lightning-card>
+</template>
